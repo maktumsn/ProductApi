@@ -1,0 +1,21 @@
+  @PostMapping("/product")
+    public ResponseEntity<?> saveProduct( @RequestBody Product product)  {
+        return ResponseEntity.ok().body( productservice.saveproduct(product));
+    }
+    @PutMapping("/saveProduct/{pid}")
+    public ResponseEntity<?> updateProduct(@RequestBody Product product) {
+        Product savedproduct = productservice.updateproduct(product);
+        return ResponseEntity.accepted().body(savedproduct);
+    }
+
+    @DeleteMapping("/product/{pid}")
+    public void deleteCustomer(@PathVariable int pid) {
+        Product product=  productservice.retrieveProducts(pid);
+        productservice.deleteProducts(pid);
+    }
+
+
+        @GetMapping("/product/{pid}")
+        public ResponseEntity<?> getProductBYId(@PathVariable int pid) {
+            return ResponseEntity.ok().body(productservice.retrieveProducts(pid));
+        }
