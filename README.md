@@ -2,6 +2,7 @@ Java jdk 1.8 has been used
 This has been developed in Intellij
 The Database used is PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
 application.properties contains the port number,credentials for the database being used
+Product Table Data.csv file contains the contents of PRODUCT Table.
 
 ------------------------------------------------------------------------------------------------------
 
